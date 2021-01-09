@@ -2,6 +2,7 @@ body{
     margin: 1rem;
     background-color: white;
     font-family: 'Yusei Magic', sans-serif;
+    letter-spacing: 3px;
 }
 
 /* colors */
@@ -24,11 +25,17 @@ body{
 .bg-2{
     background-color: #c39ea0;
 }
+.text-4{
+    color:#a00e2a;
+}
 .bg-3{
 background-color: #fa255e;
 }
 .bg-6{
     background-color: #9c0a31;
+}
+.text-3{
+    color:  #fa255e;
 }
 .bg-4{
 background-color: #0e0b16;
@@ -40,10 +47,25 @@ background-color: #c60021;
 .myContainer{
     width: 96vw;
     margin: auto;
+    min-height: 100vh;
 }
 
 .box{
     min-height: 33vh;
+    display: flex;
+    justify-content: center;
+}
+.box-1{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    
+}
+.box-1-child{
+    display: flex;
+    flex-direction: column;
+}
+.cen{
     display: flex;
     justify-content: center;
 }
@@ -60,8 +82,21 @@ background-color: #c60021;
 a {
     color: #fff;
     text-decoration: none;
+    
   }
   a:hover{
-      text-decoration: none;
-      color: floralwhite;
+     color: floralwhite;
+      
   }
+.thin{
+    font-weight: 50;
+}
+
+.thin:hover{
+    color:#a00e2a;
+    text-decoration: underline;
+}
+
+p{
+    letter-spacing: 0px;
+}
