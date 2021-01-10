@@ -1,3 +1,7 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 body{
     margin: 1rem;
     background-color: white;
@@ -64,6 +68,12 @@ background-color: #c60021;
 .box-1-child{
     display: flex;
     flex-direction: column;
+
+}
+
+.box-child{
+  display: flex;
+  flex-direction: row;
 }
 .cen{
     display: flex;
@@ -154,6 +164,7 @@ p{
   }
 
   @media screen and (min-width: 480px) {
+ 
     .res-im {
       max-width: 94vw;
     }
