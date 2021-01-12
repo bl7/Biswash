@@ -35,7 +35,8 @@ body {
   color: #f1f1ef;
 }
 .bg-1 {
-  background-color: #dfd5d5;
+  /* background-color: #dfd5d5; */
+  background-color: #dadada;
 }
 .bg-2 {
   background-color: #c39ea0;
@@ -62,7 +63,7 @@ body {
 .myContainer {
   /* border: 30px solid white; */
   margin: auto;
-  /* min-height: 100vh; */
+  min-height: 91vh;
   overflow: hidden;
 }
 
@@ -291,7 +292,7 @@ p {
   color: #0e0b16;
   text-decoration: none;
   text-transform: uppercase;
-  background-image: linear-gradient(120deg, transparent 50%, #c39ea0 50%);
+  background-image: linear-gradient(120deg, transparent 50%, #dfd5d5 50%);
   background-size: 220%;
   transition: all 0.2s;
 }
@@ -365,3 +366,93 @@ p {
   top: 0;
   transform: rotate(-135deg);
 }
+
+/* cards */
+.cards {
+  position: relative;
+  list-style-type: none;
+  padding: 0;
+  max-width: 34em;
+  margin: auto;
+}
+.card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  min-height: 60vh;
+  background: #ccc;
+  border-radius: 30px;
+  padding: 40px;
+  box-shadow: 0 0 8px #000;
+  transform: translateY(0) rotate(4deg) translateX(25px) scale(1);
+  transform-origin: 0 0;
+  transition: transform 0.6s cubic-bezier(0.8, 0.2, 0.1, 0.8) 0.1s,
+    background 0.4s linear;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.card :last-child {
+  margin-bottom: 0;
+}
+.card--next {
+  z-index: 5;
+  transform: translateY(-25px) rotate(4deg) translateX(25px) scale(1);
+}
+.card--out {
+  -webkit-animation: card-out 0.6s cubic-bezier(0.8, 0.2, 0.1, 0.8);
+  animation: card-out 0.6s cubic-bezier(0.8, 0.2, 0.1, 0.8);
+  transform: translateY(-50px) rotate(8deg) translateX(55px) scale(0.95);
+  z-index: 1;
+  background: #bbb;
+}
+@-webkit-keyframes card-out {
+  0% {
+    z-index: 20;
+    transform: translateY(0px) rotate(-4deg);
+  }
+  50% {
+    transform: translateY(-120%) rotate(-5deg) translateX(-40px);
+  }
+  80% {
+    z-index: 1;
+  }
+  100% {
+    transform: translateY(-50px) rotate(8deg) translateX(55px) scale(0.95);
+  }
+}
+@keyframes card-out {
+  0% {
+    z-index: 20;
+    transform: translateY(0px) rotate(-4deg);
+  }
+  50% {
+    transform: translateY(-120%) rotate(-5deg) translateX(-40px);
+  }
+  80% {
+    z-index: 1;
+  }
+  100% {
+    transform: translateY(-50px) rotate(8deg) translateX(55px) scale(0.95);
+  }
+}
+.card--current {
+  cursor: auto;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+  position: relative;
+  z-index: 10;
+  opacity: 1;
+  background: #eee;
+  transform: rotate(-1deg) translateX(0%) scale(1);
+}
+h1 {
+  margin: 0;
+}
+
+/*  */
