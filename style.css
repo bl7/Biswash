@@ -39,7 +39,7 @@ body {
   background-color: #dadada;
 }
 .bg-2 {
-  background-color: #c39ea0;
+  background-color: #bfabaa;
 }
 .text-4 {
   color: #e61c3f;
@@ -60,11 +60,23 @@ body {
   background-color: #c60021;
 }
 
+.bgp-1 {
+  background-color: #f2eceb;
+}
+.bgp-2 {
+  background-color: #bebfc3;
+}
+
 .myContainer {
   /* border: 30px solid white; */
   margin: auto;
   min-height: 91vh;
   overflow: hidden;
+}
+.myContainer h2 {
+  font-size: 30px;
+  letter-spacing: 4px;
+  margin: 0;
 }
 
 .box {
@@ -369,22 +381,25 @@ p {
 
 /* cards */
 .cards {
+  font-family: "Yusei Magic", sans-serif;
   position: relative;
   list-style-type: none;
   padding: 0;
-  max-width: 34em;
+  /* width: 34em; */
+  width: 60vw;
   margin: auto;
 }
+
 .card {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 2;
-  min-height: 60vh;
+  /* min-height: 60vh; */
+  width: 60vw;
   background: #ccc;
-  border-radius: 30px;
-  padding: 40px;
-  box-shadow: 0 0 8px #000;
+  border-radius: 0px;
+  box-shadow: 0 0 15px #000;
   transform: translateY(0) rotate(4deg) translateX(25px) scale(1);
   transform-origin: 0 0;
   transition: transform 0.6s cubic-bezier(0.8, 0.2, 0.1, 0.8) 0.1s,
@@ -451,7 +466,8 @@ p {
   background: #eee;
   transform: rotate(-1deg) translateX(0%) scale(1);
 }
-h1 {
+h1,
+h2 {
   margin: 0;
 }
 
