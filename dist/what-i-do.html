@@ -73,7 +73,7 @@
               <div class="">
                 <img
                   class="img-fluid"
-                  src="img/portfolio.jpg"
+                  src="img/covid.png"
                   alt=""
                   style="max-width: auto; max-height: 100%; object-fit: contain"
                 />
@@ -84,11 +84,11 @@
                 class="text-center box-1-child m-auto"
                 style="padding: 1.5rem"
               >
-                <h3 class="projHead">One Page Portfolio</h3>
-                <p class="projDesc">Design / HTML + CSS / Coding</p>
+                <h3 class="projHead">COVID-19 Tracker</h3>
+                <p class="projDesc">Design / React JS / Coding</p>
                 <a
-                  href="https://bl7.github.io/Portfolio/"
-                  title="Go to bl7.github.io/Portfolio/"
+                  href="https://covid-tracker-ddcd3.web.app"
+                  title="/"
                   target="_blank"
                   role="button"
                   class="cusButton"
@@ -127,61 +127,6 @@
             </div>
           </div>
         </li>
-        <li class="card">
-          <div class="row">
-            <div class="col-lg-6 col-sm-12 bgp-1 p-0 m-0">
-              <div class="">
-                <img
-                  class="img-fluid"
-                  src="img/portfolio.jpg"
-                  alt=""
-                  style="max-width: auto; max-height: 100%; object-fit: contain"
-                />
-              </div>
-            </div>
-            <div class="col-lg-6 col-sm-12 bg-1 uppercase box">
-              <div
-                class="text-center box-1-child m-auto"
-                style="padding: 1.5rem"
-              >
-                <h3 class="projHead">One Page Portfolio</h3>
-                <p class="projDesc">Design / HTML + CSS / Coding</p>
-                <a href="" role="button" class="cusButton">View Live</a>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li class="card">
-          <div class="row">
-            <div class="col-lg-6 col-sm-12 bgp-1 p-0 m-0">
-              <div class="">
-                <img
-                  class="img-fluid"
-                  src="img/portfolio.jpg"
-                  alt=""
-                  style="max-width: auto; max-height: 100%; object-fit: contain"
-                />
-              </div>
-            </div>
-            <div class="col-lg-6 col-sm-12 bg-1 uppercase box">
-              <div
-                class="text-center box-1-child m-auto"
-                style="padding: 1.5rem"
-              >
-                <h3 class="projHead">One Page Portfolio</h3>
-                <p class="projDesc">Design / HTML + CSS / Coding</p>
-                <a
-                  href="https://bl7.github.io/Portfolio/"
-                  title="Go to bl7.github.io/Portfolio/"
-                  target="_blank"
-                  role="button"
-                  class="cusButton"
-                  >View Live</a
-                >
-              </div>
-            </div>
-          </div>
-        </li>
       </ul>
       <div class="row">
         <div class="col-md-12 text-center uppercase mt-5 px-5">
@@ -201,31 +146,31 @@
       $.fn.commentCards = function () {
         return this.each(function () {
           var $this = $(this),
-            $cards = $this.find(".card"),
-            $current = $cards.filter(".card--current"),
+            $cards = $this.find('.card'),
+            $current = $cards.filter('.card--current'),
             $next;
 
-          $cards.on("click", function () {
+          $cards.on('click', function () {
             if (!$current.is(this)) {
-              $cards.removeClass("card--current card--out card--next");
-              $current.addClass("card--out");
-              $current = $(this).addClass("card--current");
+              $cards.removeClass('card--current card--out card--next');
+              $current.addClass('card--out');
+              $current = $(this).addClass('card--current');
               $next = $current.next();
               $next = $next.length ? $next : $cards.first();
-              $next.addClass("card--next");
+              $next.addClass('card--next');
             }
           });
 
           if (!$current.length) {
             $current = $cards.last();
-            $cards.first().trigger("click");
+            $cards.first().trigger('click');
           }
 
-          $this.addClass("cards--active");
+          $this.addClass('cards--active');
         });
       };
 
-      $(".cards").commentCards();
+      $('.cards').commentCards();
     </script>
     <script src="main.js"></script>
     <script
